@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Multimedia</title>
+		<meta charset="utf-8"/>		
+	</head>
+	<body>
+        Multimedia(10-03-1999)
+        <figure>
+                <img src="https://cdn.pixabay.com/photo/2017/05/08/13/15/spring-bird-2295431__340.jpg" alt="Girl Image" height=300px>
+                <img src="https://cdn.pixabay.com/photo/2017/05/08/13/15/spring-bird-2295431__340.jpg" alt="Girl Image" height=300px>
+                <figcaption>Bird </figcaption>
+        </figure>
+
+            <audio controls>
+                    <source src="audios/audio.ogg" type="audio/ogg"></br>
+                    <source src="audios/audio.mp3" type="audio/mpeg"></br>
+                  Your browser does not support the audio element.
+            </audio> 
+        <hr>
+        1.controls:added the pause and play button </br>
+            different types of output controls for different browsers</br>
+            <video width="300" height="300" controls>
+                 <source src="videos/video.mp4" type="video/mp4">
+                 <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video> </br>
+        2.preload:</br>
+
+            <video controls preload="none" width="300" height="300">
+                <source src="videos/video.mp4" type="video/mp4">
+                <source src="videos/video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+              </video> 
+            </br>
+        3.autoplay:</br>
+            <video width="300" height="300" autoplay>
+                <source src="videos/video.mp4" type="video/mp4">
+                <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video> </br>
+        4.loop:</br>
+            <video controls loop width="300" height="300">
+                <source src="videos/video.mp4" type="video/mp4">
+                <source src="videos/video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video> 
+    
+        
+
+    <hr>
+
+    <video controls height="300px" width="300px">
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="vidio/ogg">
+            <object data="videos/video.swf" type="application/x-shockwave-flash"></object> 
+     </video>  
+     <br> 
+     <div >
+        <video id="videoPlayer" ontimeupdate="updateProgress()" controls height="400px" width="400px">
+            <source src="videos/video.mp4" type="video/mp4">
+        </video><br>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="stop()">stop</button>
+    </div>
+    <div id="progressbar"></div>
+    <script>
+            var video=document.getElementById('videoPlayer');
+            function play(){
+                video.play();
+            }
+            function pause(){
+                video.pause();
+            }
+            function stop(){
+                video.pause();
+                video.currentTime=0;
+            }
+            function updateProgress(){
+                var progressbar=document.getElementById('progressbar');
+                progressbar.innerHTML=Math.round((video.currentTime*100)/video.duration);
+            }
+        </script>
+    </body>
+</html>
