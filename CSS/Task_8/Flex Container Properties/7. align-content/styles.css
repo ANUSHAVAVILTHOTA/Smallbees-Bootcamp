@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+.container {
+    border: 6px solid black;
+    display: flex;
+    height: 800px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    /* align-content: stretch | flex-start | flex-end | space-between | space-around */
+}
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.item{
+    background-color: rgb(169, 74, 247);
+}

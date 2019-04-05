@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+.container1 {
+    border: 6px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.container2 {
+    border: 6px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container3 {
+    border: 6px solid black;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.item{
+    background-color: rgb(17, 170, 3);
+}
